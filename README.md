@@ -91,11 +91,11 @@ Control Flow and Collection Types (65–93)
 		- [👍] ✏️ What will `arr[1]` return from this array `int[] arr = {'red','green','blue'};` ? : **green**
 		- [👍] Write an Array of the type `int[]`
 		- [👍] Write a List of the type `List<string>`
-		- [] Write a Dictionary of the type `Dictionary<string, int>`
-	- [ ] Loops
-		- [ ] Use a `for` loop to print a specific index of a `List<string>`
-		- [ ] Use a `foreach` loop to print all indexes of a `List<string>`
-		- [ ] Use a `foreach` loop to print the `KeyValuePair.Key` and `KeyValuePair.Value` of all indexes of a `Dictionary<string, int>`
+		- [👍] Write a Dictionary of the type `Dictionary<string, int>`
+	- [👍] Loops
+		- [👍] Use a `for` loop to print a specific index of a `List<string>`
+		- [👍] Use a `foreach` loop to print all indexes of a `List<string>`
+		- [👍] Use a `foreach` loop to print the `KeyValuePair.Key` and `KeyValuePair.Value` of all indexes of a `Dictionary<string, int>`
 
 
 
@@ -103,11 +103,11 @@ Control Flow and Collection Types (65–93)
 Working with Classes, Structs, and OOP (94–119)
 
 - Classes
-	- [ ] ✏️ Explain the difference between reference and value type variables: **??**
-	- [ ] Create Assets/Scripts/Character.cs
-		- [ ] Create a `Character` class
-		- [ ] Create `string` and `int` fields inside the Character class
-		- [ ] Create a `Character()` constructor and populate the above fields with its parameters
+	- [👍] ✏️ Explain the difference between reference and value type variables: **Value type variables directly contain their data while reference types only store pointers to where the data is being held**
+	- [👍] Create Assets/Scripts/Character.cs
+		- [👍] Create a `Character` class
+		- [👍] Create `string` and `int` fields inside the Character class
+		- [👍] Create a `Character()` constructor and populate the above fields with its parameters
 	- [ ] Update Assets/Scripts/LearningCurve.cs
 		- [ ] Instantiate two new Character objects `hero` and `heroine` from the `Character` class
 		- [ ] Print out each characters data
