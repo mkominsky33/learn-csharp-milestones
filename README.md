@@ -108,9 +108,9 @@ Working with Classes, Structs, and OOP (94–119)
 		- [👍] Create a `Character` class
 		- [👍] Create `string` and `int` fields inside the Character class
 		- [👍] Create a `Character()` constructor and populate the above fields with its parameters
-	- [ ] Update Assets/Scripts/LearningCurve.cs
-		- [ ] Instantiate two new Character objects `hero` and `heroine` from the `Character` class
-		- [ ] Print out each characters data
+	- [👍] Update Assets/Scripts/LearningCurve.cs
+		- [👍] Instantiate two new Character objects `hero` and `heroine` from the `Character` class
+		- [👍] Print out each characters data
 - [ ] Structs
 	- [ ] Update Assets/Scripts/Character.cs
 		- [ ] Add a `Weapon` struct
