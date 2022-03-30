@@ -33,5 +33,4 @@ this.transform.Rotate(Vector3.up * hInput * Time.deltaTime); */
           {
 // 3
               _rb.AddForce(Vector3.up * jumpVelocity, ForceMode.Impulse);
-           }
- }
+           }}}
