@@ -3,20 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerBehavior : MonoBehaviour
-       {
-// 1
+    {
        public float moveSpeed = 10f;
-           public float rotateSpeed = 75f;
-// 2
-private float vInput;
-private float hInput;
+       public float rotateSpeed = 75f;
+        // 1
+        public float jumpVelocity = 5f;
+
+        public float distanceToGround = 0.1f;
+              // 2
+                     public LayerMask groundLayer;
+
+        private float vInput;
+        private float hInput;
+
 // 1
 private Rigidbody _rb;
+
+private CapsuleCollider _col;
 // 2
 void Start()
 {
 // 3
     _rb = GetComponent<Rigidbody>();
+    _col = GetComponent<CapsuleCollider>();
 }
 void Update()
 {
@@ -29,6 +38,12 @@ this.transform.Rotate(Vector3.up * hInput * Time.deltaTime); */
 // 1
           void FixedUpdate()
           {
+            // 5
+  if(IsGrounded() && Input.GetKeyDown(KeyCode.Space)) {
+          _rb.AddForce(Vector3.up * jumpVelocity,
+              ForceMode.Impulse);
+  }
+
               // 2
               Vector3 rotation = Vector3.up * hInput;
               // 3
@@ -40,4 +55,16 @@ this.transform.Rotate(Vector3.up * hInput * Time.deltaTime); */
 // 5
                _rb.MoveRotation(_rb.rotation * angleRot);
           }
+          private bool IsGrounded()
+  {
+      // 7
+      Vector3 capsuleBottom = new Vector3(_col.bounds.center.x,
+          _col.bounds.min.y, _col.bounds.center.z);
+      // 8
+      bool grounded = Physics.CheckCapsule(_col.bounds.center,
+         capsuleBottom, distanceToGround, groundLayer,
+            QueryTriggerInteraction.Ignore);
+  // 9
+  return grounded;
+                  }
 }
