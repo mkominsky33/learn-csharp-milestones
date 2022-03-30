@@ -5,6 +5,10 @@ using UnityEngine;
 public class LearningCurve : MonoBehaviour
 {
 
+  private Transform camTransform;
+  public GameObject directionLight;
+  private Transform lightTransform;
+
   public int testNum = 5;
 
   public float testFloat = 0;
@@ -27,6 +31,13 @@ public class LearningCurve : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      //directionLight = GameObject.Find("Directional Light");
+
+      lightTransform = directionLight.GetComponent<Transform>();
+      Debug.Log(lightTransform.localPosition);
+      camTransform = this.GetComponent<Transform>();
+      Debug.Log(camTransform.localPosition);
+
       Character hero = new Character();
       Character heroine = new Character("Jade");
       Weapon huntingBow = new Weapon("Hunting Bow", 105);
@@ -35,7 +46,7 @@ public class LearningCurve : MonoBehaviour
       warBow.name = "War Bow";
       warBow.damage = 185;
 
-      Paladin knight = new Paladin("Sir Arthur");
+      Paladin knight = new Paladin("Sir Arthur", huntingBow);
       knight.PrintStatsInfo();
 
       huntingBow.PrintWeaponStats();
