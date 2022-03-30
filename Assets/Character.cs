@@ -19,6 +19,11 @@ public class Character: MonoBehaviour
   {
     Debug.LogFormat("Hero: {0} - {1} EXP", name, exp);
   }
+  private void Reset()
+  {
+    this.name = "Not Assigned";
+    this.exp = 0;
+  }
 }
 public struct Weapon
 {
